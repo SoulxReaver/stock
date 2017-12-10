@@ -1,2 +1,20 @@
-<input #box (keyup.enter)="submit(box.value)">
-<button (click)="submit(box.value)">Submit</button>
+<section id="inputBox">
+    <div>
+        <input #box (keyup.enter)="submit(box.value)">
+        <button (click)="submit(box.value)">Submit</button>
+    </div>
+</section>
+
+<section id="Plotjs">
+    <div id="chartIntervalList">
+        <button (click)="submit(box.value)">1D</button>
+        <button (click)="fiveDaySubmit(box.value)">5D</button>
+        <button (click)="oneMonthSubmit(box.value)">1M</button>
+        <button (click)="sixMonthSubmit(box.value)">6M</button>
+        <button (click)="ytdSubmit(box.value)">YTD</button>
+        <button (click)="oneYearSubmit(box.value)">1Y</button>
+        <button (click)="fiveYearSubmit(box.value)">5Y</button>
+        <button (click)="maxYearSubmit(box.value)">Max</button>
+    </div>
+    <div [id]="chartId" style="width:600px;height:250px;"></div>
+</section>
